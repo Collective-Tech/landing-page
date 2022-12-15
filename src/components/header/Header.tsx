@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Box, Container, Stack, useMediaQuery, useTheme } from "@mui/material";
-import useIsDesktop from "../../hooks/useMedia";
+import React from "react";
+import { Box, useMediaQuery } from "@mui/material";
 import { HeaderMobile } from "./HeaderMobile";
 import { PresentationSection } from "./HeaderDesktop";
 import theme from "../../theme";

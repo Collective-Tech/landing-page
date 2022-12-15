@@ -2,11 +2,11 @@ import React from "react";
 import {
   Box,
   Container,
-  Grid,
+  
   Link,
   Stack,
   styled,
-  // TextField,
+
   Typography,
   useTheme,
   Button
@@ -19,15 +19,7 @@ import Mail from '../../Assets/Mail.svg';
 
 import theme, { colors } from "../../theme";
 
-const StyledLogo = styled("img")({
-  height: "auto",
-  objectFit: "contain",
-  transition: "opacity 0.25s ease-in-out",
-  width: 200,
-  "&:hover": {
-    opacity: 0.8,
-  },
-});
+
 
 const FooterTitle = {
   color: colors.gray,

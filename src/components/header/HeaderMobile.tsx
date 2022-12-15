@@ -3,7 +3,7 @@ import {
   Box,
   Container,
   Grid,
-  Link,
+
   Stack,
   styled,
     Typography,
@@ -13,11 +13,7 @@ import useIsDesktop from "../../hooks/useMedia";
 
 import { colors } from "../../theme";
 
-const StyledLogo = styled("img")({
-  height: "auto",
-  objectFit: "contain",
-  cursor: "pointer",
-});
+
 
 const PresentationSectionContainer = styled(Box)({
   width: "100vw",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid, Stack, Typography, Button } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography} from "@mui/material";
 import { colors } from "../../theme";
 import Coding from '../../Assets/Coding.png';
 import plan from '../../Assets/plan.png';
