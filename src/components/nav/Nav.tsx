@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Box, Container, Stack, useTheme } from "@mui/material";
+import { Box, Container, Stack, useMediaQuery, useTheme } from "@mui/material";
 import HeaderDesktop from "./NavBarDesktop";
+import HeaderMobile from "./NavMobile";
 import { colors } from "../../theme";
 
 export type MenuItem = {
@@ -13,7 +14,7 @@ export type MenuItem = {
 export const Nav: React.FC = () => {
   const [isFixed, setIsFixed] = useState(false);
   const theme = useTheme();
- 
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +55,7 @@ export const Nav: React.FC = () => {
             justifyContent: "space-between",
           }}
         >
-          <HeaderDesktop />
+        {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
         </Stack>
       </Container>
     </Box>
