@@ -2,18 +2,19 @@ import React from "react";
 import {
   Box,
   Container,
-  
   Link,
   Stack,
   styled,
-
   Typography,
   useTheme,
-  Button
+  Button,
+  Grid
 } from "@mui/material";
-import Discord from '../../Assets/Discord.svg';
-import Twitter from '../../Assets/Twit.svg';
-import Mail from '../../Assets/Mail.svg';
+import Discord from '../../Assets/discord.svg';
+import Twitter from '../../Assets/twitter.svg';
+import Collect from '../../Assets/Collect.svg';
+import mail from '../../Assets/mail.svg';
+
 
 
 
@@ -21,12 +22,12 @@ import theme, { colors } from "../../theme";
 
 
 
-const FooterTitle = {
+const FooterTitle = styled(Typography)({
   color: colors.gray,
   fontSize: "1rem",
-  letterSpacing: "1px",
+  letterSpacing: "3px",
   textTransform: "uppercase",
-};
+});
 
 const FooterLink = styled(Stack)({
   cursor: "pointer",
@@ -47,11 +48,11 @@ export type MenuItem = {
 export const MENU_ITEMS: MenuItem[] = [
   {
     name: "Home",
-    path: "/#/hire",
+    path: "/",
   },
   {
     name: "About us",
-    path: "/#/join",
+    path: "/about",
   },
   {
     name: "Services",
@@ -62,6 +63,16 @@ export const MENU_ITEMS: MenuItem[] = [
   },
 ];
 
+const StyledLogo = styled("img")({
+  height: "auto",
+  objectFit: "contain",
+  transition: "opacity 0.25s ease-in-out",
+  width: 200,
+  "&:hover": {
+    opacity: 0.8,
+  },
+});
+
 export const Footer: React.FC = () => {
   const theme = useTheme();
 
@@ -69,39 +80,31 @@ export const Footer: React.FC = () => {
     <Box
       component="footer"
       sx={{
-        py: 4,
-        // px: 4,
-        width: "100vw",
-        height: "30vh",
+        py: 6,
+        px: 4,
         bgcolor: colors.blue,
       
 
       }}
     >
       
-      <Container sx={{ display: 'flex', flexDirection: 'row', height: "20vh",  marginTop: '-20px', marginBottom: '30px'}}>
-        <Container sx={{ display: 'flex', flexDirection: 'column', width: '200px' }}>
-        <Stack spacing={3} mt={4} height={"193px"}>
-          LOGO
-          
-          <Typography component='div' sx={{ display: 'flex', flexDirection: 'row', marginTop: '80px'}}>
-          <img height={'38px'} src={Discord} alt='discord' />
-              <img height={'38px'} src={Twitter} alt='twitter' />
-              <img height={'38px'}  src={Mail} alt='twitter' />
-          </Typography>
-        
-</Stack>
-        </Container>
-        <Container sx={{ display: 'flex', flexDirection: 'column',  width: '200px' }}>
-        <Typography component="h2" variant="h6" sx={{ ...FooterTitle }}>
-                  The Collective
-                </Typography>
-                <Stack spacing={3} mt={4} height={"193px"}>
+      <Container maxWidth="lg">
+     
+        <Grid container spacing={6}>
+          <Grid item xs={12} lg={4}>
+            <Link href="/">
+            <StyledLogo src={Collect} alt="Logo" />
+            </Link>
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <Grid container flexDirection="row" spacing={4}>
+              <Grid item xs={6} sx={{marginLeft: '50%'}}>
+                <FooterTitle variant="h6">The Collective</FooterTitle>
+                <Stack spacing={3} mt={4}>
                   {MENU_ITEMS.map((item: MenuItem, index) => {
                     return (
                       <Link
                         href={item.path}
-                        target={item.external ? "_blank" : undefined}
                         key={index}
                       >
                         <FooterLink sx={{ justifyContent: "center" }}>
@@ -117,36 +120,65 @@ export const Footer: React.FC = () => {
                     );
                   })}
                 </Stack>
-
-        </Container>
-        <Stack
+                
+              </Grid>
               
+            </Grid>    
+            
+  
+         
+           
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            lg={4}
+            sx={{
+              display: "flex",
+              // justifyContent: "stretch",
+              [theme.breakpoints.up("md")]: {
+                justifyContent: "flex-end",
+              },
+            }}
+          >
+          <Stack
+              spacing={3}
               sx={{
                 display: "inline-flex",
                 [theme.breakpoints.down("lg")]: { width: "100%" },
               }}
             >
-              <Typography variant="h6" sx={{ color: colors.gray,
-  fontSize: "48px",
-  letterSpacing: "1px",
-            textTransform: "uppercase",     }}>
-Build your dream today              </Typography>
+              <FooterTitle variant="h6">Build Your Dream Today</FooterTitle>
               <Link
+               
                 target="_blank"
                 rel="noredirect"
                 underline="none"
               >
-                <Button variant="outlined" size="small" sx={{backgroundColor: '#474267'}}>
-                  Get a quote
+                <Button sx={{ border: '1px solid #FFFFFF',
+                                      backgroundColor: '#474267',}} variant="outlined" size="small">
+                 Get a quote
                 </Button>
-          </Link>
-         
-        </Stack>
-        
-      </Container>
-      <Typography variant="body1" color={colors.gray} sx={{marginLeft: '80%'}}>
+              </Link>
+            </Stack>
+         </Grid>
+        </Grid>       
+</Container>
+      <hr style={{marginTop: '20px'}}  />
+      <Container sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+      <Box width={theme.spacing(3)} sx={{display: 'flex'}}>
+        <img height={'28px'} style={{ marginRight: '10px'}} src={Discord} alt='discord' />
+      <img height={'28px'} style={{ marginRight: '10px'}} src={Twitter} alt='twitter' />
+      <img  src={mail} alt='twitter' />
+      </Box>
+
+      <Typography variant="body1" color={colors.gray}>
             © 2022 The Collective
-          </Typography>
+        </Typography>
+        </Container>
     </Box>
   );
 };
+
+
