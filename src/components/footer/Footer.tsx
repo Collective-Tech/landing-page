@@ -10,7 +10,7 @@ import {
   Button,
   Grid
 } from "@mui/material";
-import discord from '../../Assets/discord.svg';
+import discord from '../../Assets/Discord.svg';
 import Twitter from '../../Assets/twitter.svg';
 import Collect from '../../Assets/Collect.svg';
 import mail from '../../Assets/mail.svg';
