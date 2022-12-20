@@ -10,7 +10,7 @@ import {
   Button,
   Grid
 } from "@mui/material";
-import Discord from '../../Assets/discord.svg';
+import discord from '../../Assets/discord.svg';
 import Twitter from '../../Assets/twitter.svg';
 import Collect from '../../Assets/Collect.svg';
 import mail from '../../Assets/mail.svg';
@@ -168,7 +168,7 @@ export const Footer: React.FC = () => {
       <hr style={{marginTop: '20px'}}  />
       <Container sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
       <Box width={theme.spacing(3)} sx={{display: 'flex'}}>
-        <img height={'28px'} style={{ marginRight: '10px'}} src={Discord} alt='discord' />
+        <img height={'28px'} style={{ marginRight: '10px'}} src={discord} alt='discord' />
       <img height={'28px'} style={{ marginRight: '10px'}} src={Twitter} alt='twitter' />
       <img  src={mail} alt='twitter' />
       </Box>
