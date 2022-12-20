@@ -11,9 +11,9 @@ import {
   Grid
 } from "@mui/material";
 import discord from '../../Assets/Discord.svg';
-import Twitter from '../../Assets/twitter.svg';
+import Twitter from '../../Assets/Twitter.svg';
 import Collect from '../../Assets/Collect.svg';
-import mail from '../../Assets/mail.svg';
+import mail from '../../Assets/Mail.svg';
 
 
 
