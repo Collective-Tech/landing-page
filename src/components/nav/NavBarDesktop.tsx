@@ -3,6 +3,8 @@ import { Link, Stack, Typography, styled } from "@mui/material";
 import { colors } from "../../theme";
 
 
+
+
 const MenuItemButton = styled(Typography)({
   cursor: "pointer",
   fontSize: 17,
@@ -42,7 +44,7 @@ const HeaderDesktop: React.FC = () => {
                   }}>
               <Typography
                   sx={{
-                      opacity: '50%',
+                      opacity: '60%',
                       fontSize: '35px',
                       WebkitTextFillColor: 'transparent',
                       WebkitTextStrokeWidth: '1px',
@@ -70,10 +72,12 @@ const HeaderDesktop: React.FC = () => {
             key={index}
           >
             <MenuItemButton
-              color={colors.white}
+                    color={colors.white}
+                 
               key={index}
-              sx={{
-                fontWeight: 800,
+                    sx={{
+
+                  fontWeight: 800,
                 transition: "color 0.25s ease-in-out",
                   "&:hover": {
                     borderBottom: '1px solid purple'
