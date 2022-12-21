@@ -70,7 +70,6 @@ const StyledLogo = styled('img')({
 
 export const FooterDesktop: React.FC = () => {
     const theme = useTheme()
-    const isDesktop = useIsDesktop()
 
     return (
         <Box
