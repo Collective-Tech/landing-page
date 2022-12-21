@@ -36,8 +36,7 @@ export const Nav: React.FC = () => {
           background: colors.blue,
           borderBottom: '1px solid purple',
         backdropFilter: isFixed ? "blur(2px)" : undefined,
-        // paddingBottom: theme.spacing(isFixed ? 2 : 4),
-        paddingTop: theme.spacing(isFixed ? 2 : 4),
+        paddingTop: theme.spacing(isFixed ? 0 : 1),
         position: "fixed",
         top: 0,
         transition: "all 0.25s ease-in-out",
@@ -52,7 +51,7 @@ export const Nav: React.FC = () => {
           sx={{
             alignItems: "center",
             display: "flex",
-            justifyContent: "space-between",
+              justifyContent: "space-between",
           }}
         >
         {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
