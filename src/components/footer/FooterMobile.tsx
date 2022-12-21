@@ -16,7 +16,6 @@ import Collect from '../../Assets/Collect.svg'
 import mail from '../../Assets/Mail.svg'
 
 import theme, { colors } from '../../theme'
-import useIsDesktop from '../../hooks/useMedia'
 
 const FooterTitle = styled(Typography)({
     color: colors.gray,
