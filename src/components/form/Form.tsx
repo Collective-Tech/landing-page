@@ -52,7 +52,7 @@ export default function Form() {
         <>
             <SectionContainer>
                 <Box
-                    justifyContent="space-between"
+                    justifyContent="space-evenly"
                     sx={{
                         paddingTop: '60px',
                         display: 'flex',
@@ -68,6 +68,7 @@ export default function Form() {
                             width: '600px',
                             justifyContent: 'center',
                             alignItems: 'center',
+                            marginRight: '50px',
                         }}
                     >
                         <Typography variant="h2" component="h1">
@@ -122,8 +123,24 @@ export default function Form() {
                         </FormControl>
                         <FormInput
                             label="Write Your Proposal Here"
+                            multiline
                             variant="standard"
-                            sx={{ width: '100%' }}
+                            sx={{
+                                width: '100%',
+                                '& .css-wjf4vu-MuiInputBase-root-MuiInput-root:before':
+                                    {
+                                        borderBottom: '1px solid white',
+                                    },
+
+                                '& .css-wjf4vu-MuiInputBase-root-MuiInput-root:after':
+                                    {
+                                        borderBottom: '2px solid purple',
+                                    },
+                                '& .css-1mj32ne-MuiFormControl-root-MuiTextField-root':
+                                    {
+                                        borderBottom: '1px solid white',
+                                    },
+                            }}
                         />
                         <Button
                             href="/#/estimate"
