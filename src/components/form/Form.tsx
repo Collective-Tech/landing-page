@@ -92,6 +92,9 @@ export default function Form() {
                                     {
                                         color: 'white',
                                     },
+                                '& .MuiSvgIcon-root': {
+                                    color: 'white',
+                                },
                                 marginTop: '30px',
                                 width: '50%',
                             }}
