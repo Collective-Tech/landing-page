@@ -2,10 +2,9 @@ import {
     Box,
     styled,
     Typography,
-    Container,
-    Grid,
     Stack,
     TextField,
+    Button,
 } from '@mui/material'
 import InputLabel from '@mui/material/InputLabel'
 import FormControl from '@mui/material/FormControl'
@@ -45,6 +44,8 @@ export default function Form() {
         '& label.Mui-focused': {
             color: 'white',
         },
+        marginTop: '30px',
+        width: '50%',
     })
 
     return (
@@ -61,7 +62,14 @@ export default function Form() {
                     <Typography component="div" maxWidth="sm">
                         <img src={Right} alt="test" />
                     </Typography>
-                    <Stack pt={10}>
+                    <Stack
+                        pt={4}
+                        sx={{
+                            width: '600px',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
                         <Typography variant="h2" component="h1">
                             Work With Us
                         </Typography>
@@ -83,6 +91,8 @@ export default function Form() {
                                     {
                                         color: 'white',
                                     },
+                                marginTop: '30px',
+                                width: '50%',
                             }}
                         >
                             <InputLabel id="demo-simple-select-label">
@@ -104,8 +114,29 @@ export default function Form() {
                                 <MenuItem sx={{ color: 'black' }} value={30}>
                                     $50,000 - $100,000
                                 </MenuItem>
+                                <FormInput
+                                    label="Write Your Proposal Here"
+                                    variant="standard"
+                                />
                             </Select>
                         </FormControl>
+                        <FormInput
+                            label="Write Your Proposal Here"
+                            variant="standard"
+                            sx={{ width: '100%' }}
+                        />
+                        <Button
+                            href="/#/estimate"
+                            variant="outlined"
+                            sx={{
+                                border: '1px solid #FFFFFF',
+                                backgroundColor: '#474267',
+                                marginTop: '30px',
+                                width: '100%',
+                            }}
+                        >
+                            Submit
+                        </Button>
                     </Stack>
                     <Typography component="div" maxWidth="sm">
                         <img src={Frame} alt="test" />
