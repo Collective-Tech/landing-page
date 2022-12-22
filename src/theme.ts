@@ -11,7 +11,9 @@ export const colors = {
   };
 
 
-  let theme = createTheme({
+let theme = createTheme({
+    
+   
     palette: {
       primary: {
         main: colors.black,
@@ -179,11 +181,13 @@ export const colors = {
           },
         },
       },
-      MuiFormLabel: {
+      MuiInputs: {
         styleOverrides: {
-          asterisk: {
-            color: colors.purple,
-          }
+            underline: {
+                "&&:hover::before": {
+                  borderColor: "red"
+                }
+              }
         }
       },
       MuiLink: {

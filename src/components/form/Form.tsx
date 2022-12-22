@@ -29,143 +29,88 @@ export default function Form() {
         position: 'relative',
         background: colors.blue,
     })
+
+    const FormInput = styled(TextField)({
+        '& .css-171tsfm-MuiFormLabel-root-MuiInputLabel-root': {
+            color: 'white',
+        },
+        '& .css-dyp27q-MuiInputBase-root-MuiInput-root:before ': {
+            borderBottom: '1px solid white',
+            color: 'white',
+        },
+        '& .css-dyp27q-MuiInputBase-root-MuiInput-root:after': {
+            borderBottom: '2px solid purple',
+            color: 'white',
+        },
+        '& label.Mui-focused': {
+            color: 'white',
+        },
+    })
+
     return (
         <>
             <SectionContainer>
-                <Container maxWidth="sm">
-                    <img src={Right} alt="test" />
-                    <img src={Frame} alt="test" />
-
-                    <Grid
-                        container
-                        spacing={1}
-                        sx={{
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            minHeight: '80vh',
-                        }}
-                    >
-                        <Grid
-                            item
+                <Box
+                    justifyContent="space-between"
+                    sx={{
+                        paddingTop: '60px',
+                        display: 'flex',
+                        flexDirection: 'row',
+                    }}
+                >
+                    <Typography component="div" maxWidth="sm">
+                        <img src={Right} alt="test" />
+                    </Typography>
+                    <Stack pt={10}>
+                        <Typography variant="h2" component="h1">
+                            Work With Us
+                        </Typography>
+                        <hr style={{ width: '100%' }} />
+                        <FormInput label="Your Name" variant="standard" />
+                        <FormInput
+                            label="Your Orginization"
+                            variant="standard"
+                        />
+                        <FormInput label="Your Email" variant="standard" />
+                        <FormControl
+                            variant="standard"
                             sx={{
-                                justifyContent: 'flex-start',
-                                alignItems: 'center',
-
-                                alignSelf: 'center',
-                                display: 'flex',
-                            }}
-                            mt={isDesktop ? '120px' : 0}
-                        >
-                            <Stack maxWidth={1000}>
-                                <>
-                                    <>
-                                        <Typography
-                                            sx={{
-                                                fontSize: '56px',
-                                                textAlign: 'center',
-                                                fontWeight: 'bold',
-                                            }}
-                                            textAlign={
-                                                isDesktop ? 'initial' : 'center'
-                                            }
-                                        >
-                                            Work With Us
-                                        </Typography>
-                                        <hr style={{ width: '100%' }} />
-                                        <Typography
-                                            sx={{
-                                                fontSize: '20px',
-                                                textAlign: 'center',
-                                                fontWeight: 'bold',
-                                                opacity: '70%',
-                                                color: colors.white,
-                                            }}
-                                            textAlign={
-                                                isDesktop ? 'initial' : 'center'
-                                            }
-                                        >
-                                            Tell us about your project and how
-                                            we can help.
-                                        </Typography>
-                                    </>
-                                </>
-                            </Stack>
-                        </Grid>
-                        <Grid
-                            item
-                            sx={{
-                                alignItems: 'center',
-                                alignSelf: 'center',
+                                borderBottom: '1px solid white',
+                                color: 'white',
+                                '.css-171tsfm-MuiFormLabel-root-MuiInputLabel-root':
+                                    { color: 'white' },
+                                '.css-1or3es3-MuiFormLabel-root-MuiInputLabel-root':
+                                    {
+                                        color: 'white',
+                                    },
                             }}
                         >
-                            <Grid container>
-                                <Grid item xs={6}>
-                                    <TextField
-                                        id="standard-basic"
-                                        label="Your Name "
-                                        variant="standard"
-                                        sx={{ color: colors.purple }}
-                                    />
-                                </Grid>
-                                <Grid item xs={6}>
-                                    <TextField
-                                        id="standard-basic"
-                                        label="Your Orginization"
-                                        variant="standard"
-                                    />
-                                </Grid>
-                                <Grid item xs={6}>
-                                    <TextField
-                                        id="standard-basic"
-                                        label="Your Email"
-                                        variant="standard"
-                                    />
-                                </Grid>
-                                <Grid item xs={6}>
-                                    <FormControl
-                                        variant="standard"
-                                        sx={{
-                                            width: '64%',
-                                        }}
-                                    >
-                                        <InputLabel id="demo-simple-select-label">
-                                            Your Budget
-                                        </InputLabel>
-                                        <Select
-                                            labelId="demo-simple-select-standard-label"
-                                            id="demo-simple-select-standard"
-                                            value={age}
-                                            label="Age"
-                                            onChange={handleChange}
-                                        >
-                                            <MenuItem value={10}>Ten</MenuItem>
-                                            <MenuItem value={20}>
-                                                Twenty
-                                            </MenuItem>
-                                            <MenuItem value={30}>
-                                                Thirty
-                                            </MenuItem>
-                                        </Select>
-                                    </FormControl>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                        <Grid
-                            item
-                            sx={{
-                                alignItems: 'center',
-                                alignSelf: 'center',
-                            }}
-                        >
-                            <TextField
-                                id="standard-basic"
-                                label="Write Your Proposal Here"
-                                variant="standard"
-                                sx={{ width: '43vw' }}
-                            />
-                        </Grid>
-                    </Grid>
-                </Container>
+                            <InputLabel id="demo-simple-select-label">
+                                Your Budget
+                            </InputLabel>
+                            <Select
+                                labelId="demo-simple-select-standard-label"
+                                id="demo-simple-select-standard"
+                                value={age}
+                                label="Age"
+                                onChange={handleChange}
+                            >
+                                <MenuItem sx={{ color: 'black' }} value={10}>
+                                    $0 - $10,000
+                                </MenuItem>
+                                <MenuItem sx={{ color: 'black' }} value={20}>
+                                    $10,000 - $50,000
+                                </MenuItem>
+                                <MenuItem sx={{ color: 'black' }} value={30}>
+                                    $50,000 - $100,000
+                                </MenuItem>
+                            </Select>
+                        </FormControl>
+                    </Stack>
+                    <Typography component="div" maxWidth="sm">
+                        <img src={Frame} alt="test" />
+                    </Typography>
+                </Box>
             </SectionContainer>
         </>
     )
