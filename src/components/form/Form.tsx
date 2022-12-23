@@ -97,23 +97,23 @@ export default function Form() {
                             >
                                 <Grid xs={12} item>
                                     <FormInput
-                                        placeholder="Enter first name"
-                                        label="First Name"
+                                        placeholder="Enter your name"
+                                        label="Your Name"
                                         variant="standard"
                                     />
                                 </Grid>
                                 <Grid xs={12} item>
                                     <FormInput
-                                        placeholder="Enter last name"
-                                        label="Last Name"
+                                        type="email"
+                                        placeholder="Enter your email"
+                                        label="Your Email"
                                         variant="standard"
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <FormInput
-                                        type="email"
-                                        placeholder="Enter email"
-                                        label="Email"
+                                        placeholder="Enter your orginization"
+                                        label="Your Orginization"
                                         variant="standard"
                                     />
                                 </Grid>
@@ -213,102 +213,6 @@ export default function Form() {
                             </Grid>
                         </form>
                     </Grid>
-                    {/* <Stack
-                        pt={4}
-                        sx={{
-                            width: '600px',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            marginRight: '50px',
-                        }}
-                    >
-                        <Typography variant="h2" component="h1">
-                            Work With Us
-                        </Typography>
-                        <hr style={{ width: '100%' }} />
-                        <FormInput label="Your Name" variant="standard" />
-                        <FormInput label="Your Email" variant="standard" />
-                        <FormInput
-                            label="Your Orginization"
-                            variant="standard"
-                        />
-                        <FormControl
-                            variant="standard"
-                            sx={{
-                                borderBottom: '1px solid white',
-                                color: 'white',
-                                '.css-171tsfm-MuiFormLabel-root-MuiInputLabel-root':
-                                    { color: 'white' },
-                                '.css-1or3es3-MuiFormLabel-root-MuiInputLabel-root':
-                                    {
-                                        color: 'white',
-                                    },
-                                '& .MuiSvgIcon-root': {
-                                    color: 'white',
-                                },
-                                marginTop: '30px',
-                                width: '50%',
-                            }}
-                        >
-                            <InputLabel id="demo-simple-select-label">
-                                Your Budget
-                            </InputLabel>
-                            <Select
-                                labelId="demo-simple-select-standard-label"
-                                id="demo-simple-select-standard"
-                                value={age}
-                                label="Age"
-                                onChange={handleChange}
-                            >
-                                <MenuItem sx={{ color: 'black' }} value={10}>
-                                    $0 - $10,000
-                                </MenuItem>
-                                <MenuItem sx={{ color: 'black' }} value={20}>
-                                    $10,000 - $50,000
-                                </MenuItem>
-                                <MenuItem sx={{ color: 'black' }} value={30}>
-                                    $50,000 - $100,000
-                                </MenuItem>
-                                <FormInput
-                                    label="Write Your Proposal Here"
-                                    variant="standard"
-                                />
-                            </Select>
-                        </FormControl>
-                        <FormInput
-                            label="Write Your Proposal Here"
-                            multiline
-                            variant="standard"
-                            sx={{
-                                width: '100%',
-                                '& .css-wjf4vu-MuiInputBase-root-MuiInput-root:before':
-                                    {
-                                        borderBottom: '1px solid white',
-                                    },
-
-                                '& .css-wjf4vu-MuiInputBase-root-MuiInput-root:after':
-                                    {
-                                        borderBottom: '2px solid purple',
-                                    },
-                                '& .css-1mj32ne-MuiFormControl-root-MuiTextField-root':
-                                    {
-                                        borderBottom: '1px solid white',
-                                    },
-                            }}
-                        />
-                        <Button
-                            href="/#/estimate"
-                            variant="outlined"
-                            sx={{
-                                border: '1px solid #FFFFFF',
-                                backgroundColor: '#474267',
-                                marginTop: '30px',
-                                width: '100%',
-                            }}
-                        >
-                            Submit
-                        </Button>
-                    </Stack> */}
                     <Typography component="div" maxWidth="sm">
                         <img src={Frame} alt="test" />
                     </Typography>

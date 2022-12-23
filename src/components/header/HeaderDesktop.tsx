@@ -116,13 +116,12 @@ export const PresentationSection: React.FC = () => {
                             display: 'flex',
                             alignSelf: 'center',
                             opacity: '50%',
-                            fontSize: '245px',
-                            border: '1px solid white',
+                            fontSize: '220px',
                             WebkitTextFillColor: 'transparent',
                             WebkitTextStrokeWidth: '1px',
                             WebkitTextStrokeColor: colors.gray,
                             transform: 'rotate(5deg)',
-                            marginTop: '-80px',
+                            marginTop: '-2px',
                             marginLeft: '80px',
                         }}
                     >
