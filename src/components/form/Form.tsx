@@ -78,8 +78,7 @@ export default function Form() {
                                 sx={{
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
+
                                     width: '100%',
                                 }}
                             >
@@ -121,7 +120,7 @@ export default function Form() {
                                                 color: 'white',
                                             },
                                             marginTop: '30px',
-                                            width: '20vw',
+                                            width: '100%',
                                         }}
                                     >
                                         <InputLabel id="demo-simple-select-label">
@@ -193,6 +192,7 @@ export default function Form() {
                                             border: '1px solid #FFFFFF',
                                             backgroundColor: '#474267',
                                             marginTop: '30px',
+                                            width: '100%',
                                         }}
                                     >
                                         Submit
