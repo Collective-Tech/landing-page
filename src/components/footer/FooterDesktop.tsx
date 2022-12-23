@@ -46,13 +46,6 @@ export const MENU_ITEMS: MenuItem[] = [
         path: '/',
     },
     {
-        name: 'About us',
-        path: '/about',
-    },
-    {
-        name: 'Services',
-    },
-    {
         name: 'Estimate Project',
     },
 ]
