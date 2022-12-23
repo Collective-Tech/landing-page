@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-sitemap: https://collectivetech.co/sitemap.xml
+sitemap: http://collectivetech.co/sitemap.xml
