@@ -9,7 +9,6 @@ import {
     Button,
 } from '@mui/material'
 import useIsDesktop from '../../hooks/useMedia'
-
 import { colors } from '../../theme'
 
 const PresentationSectionContainer = styled(Box)({
@@ -94,7 +93,8 @@ export const PresentationSection: React.FC = () => {
                             >
                                 <Grid item>
                                     <Button
-                                        href="/#/hire"
+                                        href="/#/estimate"
+                                        variant="outlined"
                                         sx={{
                                             border: '1px solid #FFFFFF',
                                             backgroundColor: '#474267',
@@ -111,12 +111,12 @@ export const PresentationSection: React.FC = () => {
                             display: 'flex',
                             alignSelf: 'center',
                             opacity: '50%',
-                            fontSize: '245px',
+                            fontSize: '220px',
                             WebkitTextFillColor: 'transparent',
                             WebkitTextStrokeWidth: '1px',
                             WebkitTextStrokeColor: colors.gray,
                             transform: 'rotate(5deg)',
-                            marginTop: '-80px',
+                            marginTop: '-2px',
                             marginLeft: '80px',
                         }}
                     >

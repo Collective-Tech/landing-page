@@ -148,6 +148,7 @@ export const FooterDesktop: React.FC = () => {
                                 underline="none"
                             >
                                 <Button
+                                    href="/#/estimate"
                                     sx={{
                                         border: '1px solid #FFFFFF',
                                         backgroundColor: '#474267',
