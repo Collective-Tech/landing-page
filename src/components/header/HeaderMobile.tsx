@@ -95,7 +95,7 @@ export const HeaderMobile: React.FC = () => {
                             >
                                 <Grid item>
                                     <Button
-                                        href="/#/hire"
+                                        href="/#/estimate"
                                         sx={{
                                             border: '1px solid #FFFFFF',
                                             backgroundColor: '#474267',
