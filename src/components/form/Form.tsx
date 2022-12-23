@@ -3,6 +3,9 @@ import {
     styled,
     Typography,
     Stack,
+    Grid,
+    Card,
+    CardContent,
     TextField,
     Button,
 } from '@mui/material'
@@ -45,7 +48,7 @@ export default function Form() {
             color: 'white',
         },
         marginTop: '30px',
-        width: '50%',
+        width: '100%',
     })
 
     return (
@@ -62,7 +65,155 @@ export default function Form() {
                     <Typography component="div" maxWidth="sm">
                         <img src={Right} alt="test" />
                     </Typography>
-                    <Stack
+                    <Grid>
+                        <Typography
+                            gutterBottom
+                            variant="h5"
+                            sx={{ marginLeft: '28%' }}
+                        >
+                            Work With Us
+                        </Typography>
+                        <hr />
+                        <Typography
+                            variant="body2"
+                            color="textSecondary"
+                            component="p"
+                            gutterBottom
+                            sx={{ marginLeft: '15%' }}
+                        >
+                            Tell us about your project and how we can help.
+                        </Typography>
+
+                        <form>
+                            <Grid
+                                container
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    width: '100%',
+                                }}
+                            >
+                                <Grid xs={12} item>
+                                    <FormInput
+                                        placeholder="Enter first name"
+                                        label="First Name"
+                                        variant="standard"
+                                    />
+                                </Grid>
+                                <Grid xs={12} item>
+                                    <FormInput
+                                        placeholder="Enter last name"
+                                        label="Last Name"
+                                        variant="standard"
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <FormInput
+                                        type="email"
+                                        placeholder="Enter email"
+                                        label="Email"
+                                        variant="standard"
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <FormControl
+                                        variant="standard"
+                                        sx={{
+                                            borderBottom: '1px solid white',
+                                            color: 'white',
+                                            '.css-171tsfm-MuiFormLabel-root-MuiInputLabel-root':
+                                                { color: 'white' },
+                                            '.css-1or3es3-MuiFormLabel-root-MuiInputLabel-root':
+                                                {
+                                                    color: 'white',
+                                                },
+                                            '& .MuiSvgIcon-root': {
+                                                color: 'white',
+                                            },
+                                            marginTop: '30px',
+                                            width: '20vw',
+                                        }}
+                                    >
+                                        <InputLabel id="demo-simple-select-label">
+                                            Your Budget
+                                        </InputLabel>
+                                        <Select
+                                            labelId="demo-simple-select-standard-label"
+                                            id="demo-simple-select-standard"
+                                            value={age}
+                                            label="Age"
+                                            onChange={handleChange}
+                                        >
+                                            <MenuItem
+                                                sx={{ color: 'black' }}
+                                                value={10}
+                                            >
+                                                $0 - $10,000
+                                            </MenuItem>
+                                            <MenuItem
+                                                sx={{ color: 'black' }}
+                                                value={20}
+                                            >
+                                                $10,000 - $50,000
+                                            </MenuItem>
+                                            <MenuItem
+                                                sx={{ color: 'black' }}
+                                                value={30}
+                                            >
+                                                $50,000 - $100,000
+                                            </MenuItem>
+                                            <FormInput
+                                                label="Write Your Proposal Here"
+                                                variant="standard"
+                                            />
+                                        </Select>
+                                    </FormControl>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <FormInput
+                                        label="Write Your Proposal Here"
+                                        multiline
+                                        variant="standard"
+                                        sx={{
+                                            width: '30vw',
+                                            '& .css-wjf4vu-MuiInputBase-root-MuiInput-root:before':
+                                                {
+                                                    borderBottom:
+                                                        '1px solid white',
+                                                },
+
+                                            '& .css-wjf4vu-MuiInputBase-root-MuiInput-root:after':
+                                                {
+                                                    borderBottom:
+                                                        '2px solid purple',
+                                                },
+                                            '& .css-1mj32ne-MuiFormControl-root-MuiTextField-root':
+                                                {
+                                                    borderBottom:
+                                                        '1px solid white',
+                                                },
+                                        }}
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Button
+                                        href="/#/estimate"
+                                        variant="outlined"
+                                        sx={{
+                                            border: '1px solid #FFFFFF',
+                                            backgroundColor: '#474267',
+                                            marginTop: '30px',
+                                        }}
+                                    >
+                                        Submit
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </form>
+                    </Grid>
+                    {/* <Stack
                         pt={4}
                         sx={{
                             width: '600px',
@@ -76,11 +227,11 @@ export default function Form() {
                         </Typography>
                         <hr style={{ width: '100%' }} />
                         <FormInput label="Your Name" variant="standard" />
+                        <FormInput label="Your Email" variant="standard" />
                         <FormInput
                             label="Your Orginization"
                             variant="standard"
                         />
-                        <FormInput label="Your Email" variant="standard" />
                         <FormControl
                             variant="standard"
                             sx={{
@@ -157,7 +308,7 @@ export default function Form() {
                         >
                             Submit
                         </Button>
-                    </Stack>
+                    </Stack> */}
                     <Typography component="div" maxWidth="sm">
                         <img src={Frame} alt="test" />
                     </Typography>

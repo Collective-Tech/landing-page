@@ -15,12 +15,6 @@ export type MenuItem = {
 
 export const MENU_ITEMS: MenuItem[] = [
     {
-        name: 'About us',
-    },
-    {
-        name: 'Services',
-    },
-    {
         name: 'Estimate Project',
         path: '/#/estimate',
     },
