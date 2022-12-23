@@ -7,7 +7,6 @@ import {
     styled,
     Typography,
     Button,
-    Link,
 } from '@mui/material'
 import useIsDesktop from '../../hooks/useMedia'
 import { colors } from '../../theme'
@@ -18,10 +17,6 @@ const PresentationSectionContainer = styled(Box)({
     position: 'relative',
     background: colors.blue,
     // paddingTop: '20px'
-})
-const MenuItemButton = styled(Typography)({
-    cursor: 'pointer',
-    fontSize: 17,
 })
 
 export const PresentationSection: React.FC = () => {

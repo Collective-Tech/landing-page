@@ -1,20 +1,9 @@
-import {
-    Box,
-    styled,
-    Typography,
-    Stack,
-    Grid,
-    Card,
-    CardContent,
-    TextField,
-    Button,
-} from '@mui/material'
+import { Box, styled, Typography, Grid, TextField, Button } from '@mui/material'
 import InputLabel from '@mui/material/InputLabel'
 import FormControl from '@mui/material/FormControl'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
 import React from 'react'
-import useIsDesktop from '../../hooks/useMedia'
 import { colors } from '../../theme'
 import Frame from '../../Assets/Frame.png'
 import Right from '../../Assets/Right.png'
@@ -24,7 +13,6 @@ export default function Form() {
     const handleChange = (event: SelectChangeEvent) => {
         setAge(event.target.value as string)
     }
-    const isDesktop = useIsDesktop()
     const SectionContainer = styled(Box)({
         width: '100vw',
         minHeight: '100vh',
