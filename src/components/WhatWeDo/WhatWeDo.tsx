@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Container, Grid, Stack, Typography } from '@mui/material'
 import { colors } from '../../theme'
-import { wwd } from '../../constants/copy'
+import { wwd } from '../../Constants/copy'
 
 export const SectionWWD: React.FC = () => {
     return (
