@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Container, Grid, Stack, Typography } from '@mui/material'
 import { colors } from '../../theme'
 import useIsDesktop from '../../hooks/useMedia'
-import { benefits } from '../../Constants/copy'
+import { benefits } from '../../constants/copy'
 
 export const Process: React.FC = () => {
     const isDesktop = useIsDesktop()

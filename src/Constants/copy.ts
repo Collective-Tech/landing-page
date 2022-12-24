@@ -12,14 +12,14 @@ export const benefits = [
 
         icon: Intro,
         title: 'Intro',
-        description: 'We will first schedule a call with you to find out what your goals are, and how we can help you attain these goals. From this intro call, we will assemble a team that most closely matches your needs, create a scoping document and begin architecting your project.',
+        description: 'We start by learning about your business, your goals, and your target audience. This helps us understand how web3 technologies can best be used to achieve your objectives.',
     },
     {
         slug: 'tech',
 
         icon: Develop,
         title: 'Develop',
-        description: 'This is where the real magic happens. We will implement the scoping document and architecture of your project. During this process, we will keep you updated every step of the way with frequent updates and a developer standup Cadence that you set.',
+        description: 'This is where the real magic happens. Our team of experts will begin implementing the solution. During this process, we will keep you updated every step of the way with frequent updates and a developer standups that you set.',
     },
     {
         slug: 'coordination',
@@ -45,23 +45,21 @@ export const wwd = [
       icon: Tokenomics,
       title: "Tokenomics",
       description:
-        "We understand that planning a token is difficult. We collectively have years of experience designing successful tokens that perform as YOU want.",
+        "We understand that planning a token is difficult. We collectively have years of experience designing successful tokens that perform as YOU want. We help businesses create their own tokens, whether for fundraising, loyalty programs, or other purposes.        ",
     },
-    {
-      slug: "coordination",
-   
+    { 
       icon: SYT,
-      title: "Grants",
+      title: "Web3 Consulting",
       description:
-        "Want to utilize a team of bonafide builders to apply for a grant? Partner with us, and we’ll help you get over the finish line.",
+        "Not sure how web3 technologies can benefit your business? We offer expert consulting services to help you understand the potential of these technologies and how to best use them to achieve your goals.        ",
       },
       {
           slug: "coordination",
        
           icon: MVP,
-          title: "MVP",
+          title: "Smart Contracts",
           description:
-            "From ideation, to design and implementation. We will help you go from zero to MVP.",
+            "Our team of Solidity developers can create custom smart contracts for your business, whether you need to automate processes, create a token, or build a decentralized platform.",
         },
       
   
