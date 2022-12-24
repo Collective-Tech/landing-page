@@ -1,34 +1,8 @@
 import React from 'react'
 import { Box, Container, Grid, Stack, Typography } from '@mui/material'
 import { colors } from '../../theme'
-import Intro from '../../Assets/Intro.svg'
-import Develop from '../../Assets/Develop.svg'
-import Launch from '../../Assets/Launch.svg'
 import useIsDesktop from '../../hooks/useMedia'
-
-const benefits = [
-    {
-        slug: 'Intro',
-
-        icon: Intro,
-        title: 'Intro',
-        description: 'Lorem Ipsum',
-    },
-    {
-        slug: 'tech',
-
-        icon: Develop,
-        title: 'Develop',
-        description: 'Lorem Ipsum',
-    },
-    {
-        slug: 'coordination',
-
-        icon: Launch,
-        title: 'Launch',
-        description: 'Lorem Ipsum',
-    },
-]
+import { benefits } from '../../Constants/copy'
 
 export const Process: React.FC = () => {
     const isDesktop = useIsDesktop()
@@ -71,10 +45,9 @@ export const Process: React.FC = () => {
                     mb={isDesktop ? '-20px' : 0}
                     pb={isDesktop ? 0 : 5}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    ornare cursus sed nunc eget dictum Sed ornare cursus sed
-                    nunc eget dictumd nunc eget dictum Sed ornare cursus sed
-                    nunc eget dictum
+                    We provide web3 design and development services to projects
+                    that are seeking to have a sustainable impact on the real
+                    world.
                 </Typography>
                 <Grid
                     container
